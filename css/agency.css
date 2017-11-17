@@ -400,8 +400,8 @@ section h3.section-subheading {
 .timeline>li .timeline-image {
     left: 0;
     margin-left: 0;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     z-index: 100;
     background-color: #fff;
@@ -508,8 +508,8 @@ section h3.section-subheading {
         padding: 0 20px 20px 100px
     }
     .timeline>li .timeline-image {
-        width: 80px;
-        height: 80px;
+        width: 40px;
+        height: 40px;
         margin-left: -40px
     }
     .timeline>li .timeline-image h4 {
@@ -614,8 +614,8 @@ ul.social-buttons {
 ul.social-buttons li a {
     display: block;
     background-color: #222;
-    height: 40px;
-    width: 40px;
+    height: 2em;
+    width: 2em;
     border-radius: 100%;
     font-size: 20px;
     line-height: 40px;
@@ -630,6 +630,17 @@ ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
     background-color: #992600
 }
+
+
+ul.social-buttons li i.fa {
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px #888;
+  padding: 0.1em 0.1em;
+  font-size: 1em;
+}
+
+
 .btn:focus,
 .btn:active,
 .btn.active,
@@ -717,4 +728,89 @@ img::-moz-selection {
 }
 body {
     webkit-tap-highlight-color: #992600
+}
+
+i.fa {
+  margin-top: 5px;
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+  font-size: 1.3em;
+  margin: 5px;
+}
+
+.paper{
+  margin-top: 20px;
+}
+
+.paper-title{
+  margin-bottom: 0px;
+}
+
+.buttons{
+    float: right;
+}
+
+.buttons a {
+    text-decoration: none !important;
+    float: right;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #992600;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
 }
